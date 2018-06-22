@@ -38,16 +38,16 @@
       var gravityVector = new BABYLON.Vector3(0, -9.81, 0);
       scene.enablePhysics(gravityVector, new BABYLON.CannonJSPlugin());
 
-      scene.clearColor = new BABYLON.Color3(0.5, 0.8, 0.5);
+      scene.clearColor = new BABYLON.Color3(0, 0, 0);
       
-      scene.clearColor = new BABYLON.Color3.Green();      
+      scene.clearColor = new BABYLON.Color3.Black();      
 
       //===TRACK CODE
- var _xFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.025)+(3*t*Math.pow((1-t),2)*0.1)+(3*Math.pow(t,2)*(1-t)*0.4700071024894714)+(Math.pow(t,3)*0.6450071024894715)},function(t) {return (Math.pow((1-t),3)*0.6450071024894715)+(3*t*Math.pow((1-t),2)*0.8200071024894714)+(3*Math.pow(t,2)*(1-t)*0.8750071024894714)+(Math.pow(t,3)*0.7650071024894715)},function(t) {return (Math.pow((1-t),3)*0.7650071024894715)+(3*t*Math.pow((1-t),2)*0.6550071024894715)+(3*Math.pow(t,2)*(1-t)*0.30500710248947144)+(Math.pow(t,3)*0.11500710248947144)}];var i = Math.max(0,Math.min(2, Math.floor(t * 3)));return fns[i]((t - (i/3)) * 3);};
-var _yFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.2)+(3*t*Math.pow((1-t),2)*0.025)+(3*Math.pow(t,2)*(1-t)*0.26603694915771486)+(Math.pow(t,3)*0.10353694915771484)},function(t) {return (Math.pow((1-t),3)*0.10353694915771484)+(3*t*Math.pow((1-t),2)*-0.058963050842285154)+(3*Math.pow(t,2)*(1-t)*0.7060369491577149)+(Math.pow(t,3)*0.7610369491577148)},function(t) {return (Math.pow((1-t),3)*0.7610369491577148)+(3*t*Math.pow((1-t),2)*0.8160369491577149)+(3*Math.pow(t,2)*(1-t)*0.8485369491577148)+(Math.pow(t,3)*0.5810369491577149)}];var i = Math.max(0,Math.min(2, Math.floor(t * 3)));return fns[i]((t - (i/3)) * 3);};
-
-
-
+var _xFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.025)+(3*t*Math.pow((1-t),2)*0.1)+(3*Math.pow(t,2)*(1-t)*0.185)+(Math.pow(t,3)*0.215)},function(t) {return (Math.pow((1-t),3)*0.215)+(3*t*Math.pow((1-t),2)*0.245)+(3*Math.pow(t,2)*(1-t)*0.3825)+(Math.pow(t,3)*0.3825)},function(t) {return (Math.pow((1-t),3)*0.3825)+(3*t*Math.pow((1-t),2)*0.3825)+(3*Math.pow(t,2)*(1-t)*0.1325)+(Math.pow(t,3)*0.1325)},function(t) {return (Math.pow((1-t),3)*0.1325)+(3*t*Math.pow((1-t),2)*0.1325)+(3*Math.pow(t,2)*(1-t)*0.3)+(Math.pow(t,3)*0.3)},function(t) {return (Math.pow((1-t),3)*0.3)+(3*t*Math.pow((1-t),2)*0.3)+(3*Math.pow(t,2)*(1-t)*0.3875)+(Math.pow(t,3)*0.3875)},function(t) {return (Math.pow((1-t),3)*0.3875)+(3*t*Math.pow((1-t),2)*0.3875)+(3*Math.pow(t,2)*(1-t)*0.0475)+(Math.pow(t,3)*0.1025)},function(t) {return (Math.pow((1-t),3)*0.1025)+(3*t*Math.pow((1-t),2)*0.1575)+(3*Math.pow(t,2)*(1-t)*0.345)+(Math.pow(t,3)*0.345)},function(t) {return (Math.pow((1-t),3)*0.345)+(3*t*Math.pow((1-t),2)*0.345)+(3*Math.pow(t,2)*(1-t)*0.7575)+(Math.pow(t,3)*0.7575)},function(t) {return (Math.pow((1-t),3)*0.7575)+(3*t*Math.pow((1-t),2)*0.7575)+(3*Math.pow(t,2)*(1-t)*0.66)+(Math.pow(t,3)*0.66)},function(t) {return (Math.pow((1-t),3)*0.66)+(3*t*Math.pow((1-t),2)*0.66)+(3*Math.pow(t,2)*(1-t)*0.9575)+(Math.pow(t,3)*0.9575)},function(t) {return (Math.pow((1-t),3)*0.9575)+(3*t*Math.pow((1-t),2)*0.9575)+(3*Math.pow(t,2)*(1-t)*0.61)+(Math.pow(t,3)*0.61)},function(t) {return (Math.pow((1-t),3)*0.61)+(3*t*Math.pow((1-t),2)*0.61)+(3*Math.pow(t,2)*(1-t)*0.6)+(Math.pow(t,3)*0.6)},function(t) {return (Math.pow((1-t),3)*0.6)+(3*t*Math.pow((1-t),2)*0.6)+(3*Math.pow(t,2)*(1-t)*0.9425)+(Math.pow(t,3)*0.9425)},function(t) {return (Math.pow((1-t),3)*0.9425)+(3*t*Math.pow((1-t),2)*0.9425)+(3*Math.pow(t,2)*(1-t)*0.54)+(Math.pow(t,3)*0.54)},function(t) {return (Math.pow((1-t),3)*0.54)+(3*t*Math.pow((1-t),2)*0.54)+(3*Math.pow(t,2)*(1-t)*0.5075)+(Math.pow(t,3)*0.5075)},function(t) {return (Math.pow((1-t),3)*0.5075)+(3*t*Math.pow((1-t),2)*0.5075)+(3*Math.pow(t,2)*(1-t)*0.955)+(Math.pow(t,3)*0.955)}];var i = Math.max(0,Math.min(15, Math.floor(t * 16)));return fns[i]((t - (i/16)) * 16);};
+var _yFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.2)+(3*t*Math.pow((1-t),2)*0.025)+(3*Math.pow(t,2)*(1-t)*0.4128125)+(Math.pow(t,3)*0.1303125)},function(t) {return (Math.pow((1-t),3)*0.1303125)+(3*t*Math.pow((1-t),2)*-0.1521875)+(3*Math.pow(t,2)*(1-t)*0.1453125)+(Math.pow(t,3)*0.1453125)},function(t) {return (Math.pow((1-t),3)*0.1453125)+(3*t*Math.pow((1-t),2)*0.1453125)+(3*Math.pow(t,2)*(1-t)*0.3528125)+(Math.pow(t,3)*0.3528125)},function(t) {return (Math.pow((1-t),3)*0.3528125)+(3*t*Math.pow((1-t),2)*0.3528125)+(3*Math.pow(t,2)*(1-t)*0.7878125)+(Math.pow(t,3)*0.7878125)},function(t) {return (Math.pow((1-t),3)*0.7878125)+(3*t*Math.pow((1-t),2)*0.7878125)+(3*Math.pow(t,2)*(1-t)*0.6478125)+(Math.pow(t,3)*0.6478125)},function(t) {return (Math.pow((1-t),3)*0.6478125)+(3*t*Math.pow((1-t),2)*0.6478125)+(3*Math.pow(t,2)*(1-t)*0.7703125)+(Math.pow(t,3)*0.2478125)},function(t) {return (Math.pow((1-t),3)*0.2478125)+(3*t*Math.pow((1-t),2)*-0.2746875)+(3*Math.pow(t,2)*(1-t)*0.3603125)+(Math.pow(t,3)*0.3603125)},function(t) {return (Math.pow((1-t),3)*0.3603125)+(3*t*Math.pow((1-t),2)*0.3603125)+(3*Math.pow(t,2)*(1-t)*0.3503125)+(Math.pow(t,3)*0.3503125)},function(t) {return (Math.pow((1-t),3)*0.3503125)+(3*t*Math.pow((1-t),2)*0.3503125)+(3*Math.pow(t,2)*(1-t)*0.9253125)+(Math.pow(t,3)*0.9253125)},function(t) {return (Math.pow((1-t),3)*0.9253125)+(3*t*Math.pow((1-t),2)*0.9253125)+(3*Math.pow(t,2)*(1-t)*0.6728125)+(Math.pow(t,3)*0.6728125)},function(t) {return (Math.pow((1-t),3)*0.6728125)+(3*t*Math.pow((1-t),2)*0.6728125)+(3*Math.pow(t,2)*(1-t)*0.5328125)+(Math.pow(t,3)*0.5328125)},function(t) {return (Math.pow((1-t),3)*0.5328125)+(3*t*Math.pow((1-t),2)*0.5328125)+(3*Math.pow(t,2)*(1-t)*0.1778125)+(Math.pow(t,3)*0.1778125)},function(t) {return (Math.pow((1-t),3)*0.1778125)+(3*t*Math.pow((1-t),2)*0.1778125)+(3*Math.pow(t,2)*(1-t)*0.0928125)+(Math.pow(t,3)*0.0928125)},function(t) {return (Math.pow((1-t),3)*0.0928125)+(3*t*Math.pow((1-t),2)*0.0928125)+(3*Math.pow(t,2)*(1-t)*0.0678125)+(Math.pow(t,3)*0.0678125)},function(t) {return (Math.pow((1-t),3)*0.0678125)+(3*t*Math.pow((1-t),2)*0.0678125)+(3*Math.pow(t,2)*(1-t)*0.6828125)+(Math.pow(t,3)*0.6828125)},function(t) {return (Math.pow((1-t),3)*0.6828125)+(3*t*Math.pow((1-t),2)*0.6828125)+(3*Math.pow(t,2)*(1-t)*0.9453125)+(Math.pow(t,3)*0.9453125)}];var i = Math.max(0,Math.min(15, Math.floor(t * 16)));return fns[i]((t - (i/16)) * 16);};
+/* START CURVE DATA 
+{"start":[10,80],"init":[40,10],"segments":[{"a":[74,165.125],"b":[86,52.125]},{"a":[153,58.125],"b":[153,58.125]},{"a":[53,141.125],"b":[53,141.125]},{"a":[120,315.125],"b":[120,315.125]},{"a":[155,259.125],"b":[155,259.125]},{"a":[19,308.125],"b":[41,99.125]},{"a":[138,144.125],"b":[138,144.125]},{"a":[303,140.125],"b":[303,140.125]},{"a":[264,370.125],"b":[264,370.125]},{"a":[383,269.125],"b":[383,269.125]},{"a":[244,213.125],"b":[244,213.125]},{"a":[240,71.125],"b":[240,71.125]},{"a":[377,37.125],"b":[377,37.125]},{"a":[216,27.125],"b":[216,27.125]},{"a":[203,273.125],"b":[203,273.125]},{"a":[382,378.125],"b":[382,378.125]}]}
+   END CURVE DATA */
       //===END TRACK CODE
 
       var xFn = function(t) { return 650 * _xFn(t); }
@@ -67,6 +67,36 @@ var _yFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.2)+(
         restitution: 0.9
       }, scene);
 
+      BABYLON.SceneLoader.ImportMesh(null, "resources/", "speed.obj", scene, function(meshes) {
+var boostMesh = meshes[0], boosts = [];
+boostMesh.material = new BABYLON.StandardMaterial("boostMaterial", scene);
+boostMesh.material.diffuseColor = new BABYLON.Color3(1, 0, 0);
+boostMesh.scaling = new BABYLON.Vector3(5, 5, 5);
+boostMesh.setEnabled(false);
+function boostAt(xFn, zFn, t) {
+var newBoost = boostMesh.clone('boost');
+newBoost.position = new BABYLON.Vector3(xFn(t), 3.2, zFn(t));
+newBoost.rotation.y = -derivAngle(t, xFn, zFn);
+newBoost.setEnabled(true);
+boosts.push(newBoost);
+}
+
+// Place boosts here
+boostAt(xFn, zFn, 0.01);
+
+scene.registerAfterRender(function() {
+boosts.forEach(function(boost, i){
+if(boost.intersectsMesh(playerSphere)){
+boost.dispose();
+boosts.splice(i,1);
+var vel = playerSphere.physicsImpostor.getLinearVelocity();
+playerSphere.applyImpulse(vel.normalize().scale(100), playerSphere.getAbsolutePosition());
+} else {
+boost.rotation.y += 0.01
+}
+});
+});
+}); 
 
     var camera = new BABYLON.ArcRotateCamera("Camera", 0, (3 * Math.PI) / 8, 20, playerSphere, scene);
 
@@ -75,13 +105,36 @@ var _yFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.2)+(
         var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0, 1, 0), scene);
 
 
-        rampAt(xFn, zFn, 0.07, -Math.PI / 4, scene);
+        rampAt(xFn, zFn, 0.02, -Math.PI / 4, scene);
+        rampAt(xFn, zFn, 0.03, Math.PI / 4, scene);
+        rampAt(xFn, zFn, 0.06, -Math.PI / 4, scene);
+ 		rampAt(xFn, zFn, 0.07, Math.PI / 4, scene);
+ 	 	rampAt(xFn, zFn, 0.14, -Math.PI / 4, scene);
+ 	 	rampAt(xFn, zFn, 0.16, Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.22, -Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.23, Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.46, -Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.48, Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.02, -Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.66, -Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.67, Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.96, -Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.98, Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.47, -Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.47, Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.97,-Math.PI / 4, scene);
+ 	    rampAt(xFn, zFn, 0.97, Math.PI / 4, scene);
+
         /* OTHER rampAt Code here However many they want*/
 //NEW CODE
-        wallAt(xFn, zFn, 0.01,  -6.1, scene);
-        wallAt(xFn, zFn, 0.06,  -6.1, scene);
-        wallAt(xFn, zFn, 0.01,  6.1, scene);
-        wallAt(xFn, zFn, 0.06,  6.1, scene);
+        wallAt(xFn, zFn, 0.47,  -6.1, scene);
+        wallAt(xFn, zFn, 0.47,  6.1, scene);
+
+
+
+
+
+       
 //END NEW CODE
 
         scene.registerAfterRender(function() {
@@ -119,6 +172,9 @@ var _yFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.2)+(
 
           var currentT = tLookup(xFn, zFn, 500, playerSphere.position.x, playerSphere.position.z);
 
+          var angle = (derivAngle(currentT, xFn, zFn) - (Math.PI)); 
+camera.alpha += (angle - camera.alpha) / 32; 
+
           if (currentT > 0.99) {
             win();
           }
@@ -131,7 +187,7 @@ var _yFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.2)+(
           depth: 12 
         }, scene);
         point.material = new BABYLON.StandardMaterial("pointMaterial", scene);
-        point.material.diffuseColor = new BABYLON.Color3(1, 0, 1);
+        point.material.diffuseColor = new BABYLON.Color3(0, 0, 1);
         point.position = new BABYLON.Vector3(x, 0.1, z);
         point.rotation.y = zrot;
         point.physicsImpostor = new BABYLON.PhysicsImpostor(point, BABYLON.PhysicsImpostor.BoxImpostor, {
@@ -146,7 +202,7 @@ var _yFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.2)+(
         }
       }
 
-      drawParametric(xFn, zFn, 0, 1, 350, scene);
+      drawParametric(xFn, zFn, 0, 1, 1800, scene);
 
     
       function tLookup(xFn, zFn, res, x, z) {
@@ -211,11 +267,11 @@ var _yFn = function(t) {var fns = [function(t) {return (Math.pow((1-t),3)*0.2)+(
 	    }
 	    function lost(){
 	      window.location.reload();
-	      alert("lost");
+	      alert("Get well soon!");
 	    }
 	    function win(){
 	        window.location.reload();
-	        alert("You win!");
+	        alert("Congradulations,you win!");
 	    }
   </script>
 </head>
